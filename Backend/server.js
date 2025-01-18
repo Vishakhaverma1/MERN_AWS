@@ -5,8 +5,8 @@ import {dbConnection} from "./database/dbConnection.js";
 dbConnection();
 
 export const instance = new Razorpay({
-  key_id: process.env.RAZORPAY_API_KEY,
-  key_secret: process.env.RAZORPAY_APT_SECRET,
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
 app.listen(process.env.PORT,()=>{
