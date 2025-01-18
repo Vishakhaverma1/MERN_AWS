@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+body{
+   overflow-x: hidden;
+}
+  
+About css
+.about{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.about h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #012970;
+  } 
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #37517e;
+  }
+  
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    background: #a4dcf5;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+  
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about .content ul li {
+    padding-left: 28px;
+    position: relative;
+    text-align: justify;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+  }
+  
+  .about .content ul li+li {
+    margin-top: 10px;
+  }
+  
+  .about .content ul i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 18px;
+    color: #47b2e4;
+    line-height: 1;
+  }
+  
+  .about .content p {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(51, 51, 51);
+  }
+  
+  .about .content p:last-child {
+    margin-bottom: 0;
+  }
+  
+.about h5{
+    font-weight: 600;
+}

@@ -1,0 +1,29 @@
+#successimg {
+    width: 100%;
+    height: auto; /* Ensuring the aspect ratio is maintained */
+}
+
+#successdiv h2 {
+    margin-top: 2rem;
+    color: rgb(5, 165, 5);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#successdiv p {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#successdiv .total-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
