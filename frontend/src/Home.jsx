@@ -8,9 +8,9 @@ const Home = () => {
 
     const checkoutHandler = async (amount) => {
 
-        const { data: { key } } = await axios.get("http://localhost:4000/api/getkey")
+        const { data: { key } } = await axios.get("http://13.53.166.121:4000/api/getkey")
 
-        const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+        const { data: { order } } = await axios.post("http://13.53.166.121:4000/api/checkout", {
             amount
         })
 
@@ -22,7 +22,7 @@ const Home = () => {
             description: "Tutorial of RazorPay",
             image: "https://avatars.githubusercontent.com/u/25058652?v=4",
             order_id: order.id,
-            callback_url: "http://localhost:4000/api/paymentverification",
+            callback_url: "http://13.53.166.121:4000/api/paymentverification",
             prefill: {
                 name: "Gaurav Kumar",
                 email: "gaurav.kumar@example.com",
