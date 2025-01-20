@@ -31,7 +31,7 @@ dbConnection();
 app.use("/api", paymentRoute);
 
 app.get("/api/getkey", (req, res) =>
-  res.status(200).json({ key: process.env.RAZORPAY_KEY_ID })
+  res.status(200).json({key: process.env.key_id})
 );
 
 app.use(errorMiddleware);
