@@ -6,8 +6,14 @@ import { errorMiddleware } from "./middlewares/error.js";
 import userRouter from "./routes/user.js";
 import paymentRoute from "./routes/paymentRoutes.js";
 
-const app = express();
 dotenv.config({ path: "./config/config.env" });
+
+const app = express();
+
+import path from "path";
+const _dirname = path.dirname("");
+const buildpath = path.join(_dirname,"../frontend/dist");
+app.use(express.static(buildpath));
 
 app.use(
   cors({

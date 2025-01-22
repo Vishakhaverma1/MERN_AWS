@@ -66,9 +66,9 @@ const Form = () => {
         try {
             console.log('Fetching key and order...');
 
-            const { data: { key } } = await axios.get("http://13.53.166.121:4000/api/getkey");
+            const { data: { key } } = await axios.get("http://localhost:4000/api/getkey");
 
-            const { data: { order } } = await axios.post("http://13.53.166.121:4000/api/checkout", {
+            const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
                 amount,
                 email,
                 username,
@@ -85,14 +85,14 @@ const Form = () => {
                 description: "Tutorial of RazorPay",
                 image: "/image/barlogo.webp",
                 order_id: order.id,
-                callback_url: "http://13.53.166.121:4000/api/paymentverification",
+                callback_url: "http://localhost:4000/api/paymentverification",
                 notes: {
                     "address": "Razorpay Corporate Office"
                 },
                 theme: {
                     "color": "#3399cc"
                 },
-                prefill: { 
+                prefill: {
                     email,
                     username,
                     mobilenumber,

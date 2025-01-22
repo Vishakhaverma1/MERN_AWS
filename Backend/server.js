@@ -3,8 +3,9 @@ import Razorpay from "razorpay";
 import { dbConnection } from "./database/dbConnection.js";
 import dotenv from "dotenv";
 
-dbConnection();
 dotenv.config({ path: "./config/config.env" });
+
+dbConnection();
 
 export const instance = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
