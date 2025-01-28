@@ -19,7 +19,7 @@ const Footer = () => {
     const msgsend = async(e)=>{
         try{
             const data = await axios.post(
-                "https://edusahyogi-react-3.onrender.com/msg",
+                "http://localhost:8000/msg",
                 {name,email,subject,msg},
                 {
                     headers : {

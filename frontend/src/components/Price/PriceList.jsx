@@ -9,9 +9,9 @@ const PriceList = () => {
     const checkoutHandler = async (amount) => {
         setAmount(amount)
         try {
-            const { data: { key } } = await axios.get("http://localhost:4000/api/getkey")
+            const { data: { key } } = await axios.get("http://localhost:8000/api/getkey")
 
-            const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+            const { data: { order } } = await axios.post("http://localhost:8000/api/checkout", {
                 amount
             })
 
@@ -23,7 +23,7 @@ const PriceList = () => {
                 description: "Tutorial of RazorPay",
                 image: "/image/barlogo.jpg",
                 order_id: order.id,
-                callback_url: "http://localhost:4000/api/paymentverification",
+                callback_url: "http://localhost:8000/api/paymentverification",
 
                 notes: {
                     "address": "Razorpay Corporate Office"
